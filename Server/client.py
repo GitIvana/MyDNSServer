@@ -637,12 +637,12 @@ def main():
         print ("Usage: ./dnsclient.py <DNS name/IP> <query type>")
         exit(0)
 
-    query_elem = sys.argv[1]
+    query_houstname = sys.argv[1]
     query_type = sys.argv[2]
 
     ### Create packet according to the requested query
     packet = ""
-    query = get_dns_query(query_elem, query_type)
+    query = get_dns_query(query_houstname, query_type)
 
     # query[0] is the packet
     packet = query[0]

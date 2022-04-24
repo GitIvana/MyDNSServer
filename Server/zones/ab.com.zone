@@ -3,8 +3,8 @@
 	"$ttl": 3600,
 
 	"soa": {
-		"mname": "localhost.ab.com",
-		"rname": "localhost.ab.com",
+		"mname": "xyz.ab.com",
+		"rname": "app.ab.com",
 		"serial": "{time}",
 		"refresh": 3600,
 		"retry": 600,
@@ -27,6 +27,10 @@
 		  "value": "127.0.0.1"
 		},
 		{"name": "@",
+		  "ttl": 400,
+		  "value": "127.0.0.1"
+		},
+        {"name": "@",
 		  "ttl": 400,
 		  "value": "127.0.0.1"
 		}

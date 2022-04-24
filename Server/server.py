@@ -18,7 +18,7 @@ def load_zones():
             zonename = data["$origin"]
             jsonzone[zonename] = data
 
-    return
+    return jsonzone
 
 zonedata = load_zones()
 
@@ -36,6 +36,8 @@ def get_flag(flag):
     Z = '000'
     RCODE = '0000'
     return int(QR + opcode + AA + TC + RD, 2).to_bytes(1, byteorder='big') + int(RA + Z + RCODE, 2).to_bytes(1, byteorder='big') + int(len(flag)).to_bytes(1, byteorder='big')
+
+
 
 def getquestiondomain(data):
     domain = ''
@@ -63,6 +65,8 @@ def getquestiondomain(data):
         y+=1
     questiontype = data[y:y+2]
     return (domainpart,questiontype)
+
+
 
 def getzone(domain):
     global zonedata
